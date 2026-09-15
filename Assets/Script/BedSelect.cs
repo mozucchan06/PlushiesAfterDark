@@ -3,8 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class BedSelect : MonoBehaviour
 {
+    [SerializeField] private GameObject highlight;
+
+    private void OnMouseEnter()
+    {
+        highlight.SetActive(true);
+    }
+
+    private void OnMouseExit()
+    {
+        highlight.SetActive(false);
+    }
     private void OnMouseDown()
     {
-        SceneManager.LoadScene("Stage1_Bed");
+        SceneManager.LoadScene("Stage1");
     }
 }
