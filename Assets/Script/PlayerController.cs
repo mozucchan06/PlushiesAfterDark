@@ -3,7 +3,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float normalSpeed = 2.5f;
+    [SerializeField] private float carrySpeed = 1f;
+    private bool isCarrying = false;
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -42,8 +44,20 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        float currentSpeed = isCarrying ? carrySpeed : normalSpeed;
+
         rb.MovePosition(
-            rb.position + moveInput * moveSpeed * Time.fixedDeltaTime
+            rb.position + moveInput * currentSpeed * Time.fixedDeltaTime
         );
+    }
+
+    public void SetCarrying(bool carrying)
+    {
+        isCarrying = carrying;
+    }
+
+    public bool IsCarrying()
+    {
+        return isCarrying;
     }
 }
