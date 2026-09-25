@@ -37,6 +37,9 @@ public class ToyBox : MonoBehaviour
 
         player.SetCarrying(false);
 
+        PlayerPrefs.SetInt("Stage1Clear",1);
+        PlayerPrefs.Save();
+
         clearPanel.SetActive(true);
     }
 
@@ -56,7 +59,10 @@ public class ToyBox : MonoBehaviour
             playerNear = false;
             player = null;
 
-            putText.SetActive(false);
+            if (putText != null)
+            {
+                putText.SetActive(false);
+            }
         }
     }
 }

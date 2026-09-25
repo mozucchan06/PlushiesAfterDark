@@ -1,19 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BedSelect : MonoBehaviour
+public class Stage3Select : MonoBehaviour
 {
     [SerializeField] private GameObject highlight;
-    [SerializeField] private GameObject clearText;
-
-    private void Start()
-    {
-        if (PlayerPrefs.GetInt("Stage1Clear",0) == 1)
-        {
-            clearText.SetActive(true);
-        }
-    }
-
 
     private void OnMouseEnter()
     {
@@ -24,8 +14,9 @@ public class BedSelect : MonoBehaviour
     {
         highlight.SetActive(false);
     }
+
     private void OnMouseDown()
     {
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("Stage3");
     }
 }

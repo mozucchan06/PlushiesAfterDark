@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float normalSpeed = 2.5f;
     [SerializeField] private float carrySpeed = 1f;
+
     private bool isCarrying = false;
 
     private Rigidbody2D rb;
