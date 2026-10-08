@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &123628888
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1050,6 +1050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 8606067196998196066, guid: 1eb5e247c88bebf46bff074bc63e4744, type: 3}
+      propertyPath: normalSpeed
+      value: 1.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1761,6 +1765,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToyBox
   putText: {fileID: 1485404521}
   clearPanel: {fileID: 123628887}
+  requiredCount: 1
+  clearKey: Stage3Clear
 --- !u!61 &1791810644
 BoxCollider2D:
   m_ObjectHideFlags: 0

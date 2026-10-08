@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
 
     private bool isCarrying = false;
 
+    // 掴んでいる間の移動軸(zeroなら掴んでいない)
+    private Vector2 grabAxis = Vector2.zero;
+
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private SpriteRenderer spriteRenderer;
@@ -50,45 +53,85 @@ public class PlayerController : MonoBehaviour
 
         moveInput = moveInput.normalized;
 
-        // 向き変更
-        if (moveInput.y > 0)
+        // 向き変更(掴んでいる間は変えない)
+        if (grabAxis == Vector2.zero)
         {
-            // 上に進む → 後ろ姿
-            spriteRenderer.sprite = backSprite;
-        }
-        else if (moveInput.y < 0)
-        {
-            // 下に進む → 正面
-            spriteRenderer.sprite = frontSprite;
-        }
-        else if (moveInput.x < 0)
-        {
-            // 左に進む → 左向き
-            spriteRenderer.sprite = leftSprite;
-        }
-        else if (moveInput.x > 0)
-        {
-            // 右に進む → 右向き
-            spriteRenderer.sprite = rightSprite;
+            if (moveInput.y > 0)
+            {
+                // 上に進む → 後ろ姿
+                spriteRenderer.sprite = backSprite;
+            }
+            else if (moveInput.y < 0)
+            {
+                // 下に進む → 正面
+                spriteRenderer.sprite = frontSprite;
+            }
+            else if (moveInput.x < 0)
+            {
+                // 左に進む → 左向き
+                spriteRenderer.sprite = leftSprite;
+            }
+            else if (moveInput.x > 0)
+            {
+                // 右に進む → 右向き
+                spriteRenderer.sprite = rightSprite;
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        float currentSpeed = isCarrying ? carrySpeed : normalSpeed;
+        float currentSpeed = GetCurrentSpeed();
 
-        rb.MovePosition(
-            rb.position + moveInput * currentSpeed * Time.fixedDeltaTime
-        );
+        Vector2 move = moveInput;
+
+        // 掴んでいる間は、掴んだ軸方向の成分だけ使う
+        if (grabAxis != Vector2.zero)
+        {
+            move = grabAxis * Vector2.Dot(moveInput, grabAxis);
+        }
+
+        rb.MovePosition(rb.position + move * currentSpeed * Time.fixedDeltaTime);
     }
 
+    // 思い出を持っている状態にする
     public void SetCarrying(bool carrying)
     {
         isCarrying = carrying;
     }
 
+    // 思い出を持っているか
     public bool IsCarrying()
     {
         return isCarrying;
+    }
+
+    // Playerが現在移動している方向
+    public Vector2 GetMoveInput()
+    {
+        return moveInput;
+    }
+
+    // 現在の移動速度
+    public float GetCurrentSpeed()
+    {
+        return isCarrying ? carrySpeed : normalSpeed;
+    }
+
+    // 掴み開始:この軸方向にしか動けなくなり、箱の方を向く
+    public void SetGrabAxis(Vector2 axis)
+    {
+        grabAxis = axis;
+
+        if (axis.x > 0) spriteRenderer.sprite = rightSprite;
+        else if (axis.x < 0) spriteRenderer.sprite = leftSprite;
+        else if (axis.y > 0) spriteRenderer.sprite = backSprite;
+        else if (axis.y < 0) spriteRenderer.sprite = frontSprite;
+    }
+
+    // 掴み終了
+    public void ClearGrabAxis()
+    {
+        grabAxis = Vector2.zero;
     }
 }
