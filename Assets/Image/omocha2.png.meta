@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 9af5fd59d3653ae4f8cba2c877b0e5f1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5797122027411381052
+    second: omocha2_0
+  - first:
+      213: 6948226044928040871
+    second: omocha2_1
+  - first:
+      213: -3750424034530074202
+    second: omocha2_2
+  - first:
+      213: 5841220168764060072
+    second: omocha2_3
+  - first:
+      213: 2254353244933130495
+    second: omocha2_4
+  - first:
+      213: -6576622913694384814
+    second: omocha2_5
+  - first:
+      213: -2828960344267536118
+    second: omocha2_6
+  - first:
+      213: 9066778348001325651
+    second: omocha2_7
+  - first:
+      213: -2296469748080896823
+    second: omocha2_8
+  - first:
+      213: -2553002493416796781
+    second: omocha2_9
+  - first:
+      213: -4457009735130303353
+    second: omocha2_10
+  - first:
+      213: 4121570489879941842
+    second: omocha2_11
+  - first:
+      213: -2025586802504745438
+    second: omocha2_12
+  - first:
+      213: -8169363377169806235
+    second: omocha2_13
+  - first:
+      213: 3360418246092546522
+    second: omocha2_14
+  - first:
+      213: -3204085899720170453
+    second: omocha2_15
+  - first:
+      213: 4171499566143696078
+    second: omocha2_16
+  - first:
+      213: 8682922872722126472
+    second: omocha2_17
+  - first:
+      213: -5197703533574780229
+    second: omocha2_18
+  - first:
+      213: 1934364794933985686
+    second: omocha2_19
+  - first:
+      213: 8578358595681295201
+    second: omocha2_20
+  - first:
+      213: 412186669079593942
+    second: omocha2_21
+  - first:
+      213: 854575209559479036
+    second: omocha2_22
+  - first:
+      213: -763876778310957150
+    second: omocha2_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: omocha2_0
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 773
+        width: 281
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b927bf4c3837050800000000000000
+      internalID: 5797122027411381052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_1
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 782
+        width: 174
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af9d0b46ce0d6060800000000000000
+      internalID: 6948226044928040871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_2
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 768
+        width: 223
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a16fb01631d3fbc0800000000000000
+      internalID: -3750424034530074202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_3
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 800
+        width: 234
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1770e9bce201150800000000000000
+      internalID: 5841220168764060072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_4
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 756
+        width: 129
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff80d7a0552194f10800000000000000
+      internalID: 2254353244933130495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_5
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 753
+        width: 170
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d3d8fed442bb4a0800000000000000
+      internalID: -6576622913694384814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_6
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 545
+        width: 209
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a09444c2e838db8d0800000000000000
+      internalID: -2828960344267536118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_7
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 552
+        width: 214
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35272d1aedaa3dd70800000000000000
+      internalID: 9066778348001325651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_8
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 528
+        width: 210
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4153c6eec4120e0800000000000000
+      internalID: -2296469748080896823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_9
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 548
+        width: 210
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d843532c9e19cd0800000000000000
+      internalID: -2553002493416796781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_10
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 534
+        width: 187
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784b91992458522c0800000000000000
+      internalID: -4457009735130303353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_11
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 332
+        width: 165
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d2d6060682c23930800000000000000
+      internalID: 4121570489879941842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_12
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 324
+        width: 185
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e3cfef88ba3e3e0800000000000000
+      internalID: -2025586802504745438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_13
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 325
+        width: 213
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c45b6aa4790ae80800000000000000
+      internalID: -8169363377169806235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_14
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 305
+        width: 184
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad1661f279a92ae20800000000000000
+      internalID: 3360418246092546522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_15
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 307
+        width: 228
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b246755a9dcc883d0800000000000000
+      internalID: -3204085899720170453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_16
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 130
+        width: 139
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecce0bcf0c424e930800000000000000
+      internalID: 4171499566143696078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 139
+        width: 208
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88677b04950ff7870800000000000000
+      internalID: 8682922872722126472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_18
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 135
+        width: 191
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba8b71cc2c0ed7b0800000000000000
+      internalID: -5197703533574780229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_19
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 136
+        width: 64
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 691cf04488e38da10800000000000000
+      internalID: 1934364794933985686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_20
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 129
+        width: 148
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16b908351b37c0770800000000000000
+      internalID: 8578358595681295201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_21
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 163
+        width: 83
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d304a7779168b500800000000000000
+      internalID: 412186669079593942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_22
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 153
+        width: 90
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2d5a710af0cdb00800000000000000
+      internalID: 854575209559479036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omocha2_23
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 133
+        width: 130
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a70b980e1a2665f0800000000000000
+      internalID: -763876778310957150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      omocha2_0: 5797122027411381052
+      omocha2_1: 6948226044928040871
+      omocha2_10: -4457009735130303353
+      omocha2_11: 4121570489879941842
+      omocha2_12: -2025586802504745438
+      omocha2_13: -8169363377169806235
+      omocha2_14: 3360418246092546522
+      omocha2_15: -3204085899720170453
+      omocha2_16: 4171499566143696078
+      omocha2_17: 8682922872722126472
+      omocha2_18: -5197703533574780229
+      omocha2_19: 1934364794933985686
+      omocha2_2: -3750424034530074202
+      omocha2_20: 8578358595681295201
+      omocha2_21: 412186669079593942
+      omocha2_22: 854575209559479036
+      omocha2_23: -763876778310957150
+      omocha2_3: 5841220168764060072
+      omocha2_4: 2254353244933130495
+      omocha2_5: -6576622913694384814
+      omocha2_6: -2828960344267536118
+      omocha2_7: 9066778348001325651
+      omocha2_8: -2296469748080896823
+      omocha2_9: -2553002493416796781
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

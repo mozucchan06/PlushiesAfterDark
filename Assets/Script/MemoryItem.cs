@@ -1,11 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/// <summary>
-/// 思い出アイテム。近づいて E で拾う。
-/// すでに思い出を持っている間や、箱を掴んでいる間は拾えない。
-/// Collider2D は Is Trigger をオンにしておくこと。
-/// </summary>
 public class MemoryItem : MonoBehaviour
 {
     [SerializeField] private GameObject pickupText;
@@ -16,7 +11,7 @@ public class MemoryItem : MonoBehaviour
 
     private void Start()
     {
-        pickupText.SetActive(false);
+        SetPickupText(false);
     }
 
     private void Update()
@@ -25,7 +20,7 @@ public class MemoryItem : MonoBehaviour
 
         // 持っていない & 箱を掴んでいない時だけ拾える
         bool canPickUp = !player.IsCarrying() && GrabLock.Current == null;
-        pickupText.SetActive(canPickUp);
+        SetPickupText(canPickUp);
 
         if (canPickUp && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
         {
@@ -35,7 +30,7 @@ public class MemoryItem : MonoBehaviour
 
     private void PickUp()
     {
-        pickupText.SetActive(false);
+        SetPickupText(false);
 
         // 先に持った状態にするので、同じフレームの他のアイテムは拾えなくなる
         player.SetCarrying(true);
@@ -46,6 +41,12 @@ public class MemoryItem : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    // 「E:拾う」の表示を切り替える。アイテムと一緒に文字が消えた後でも、エラーにならない
+    private void SetPickupText(bool visible)
+    {
+        if (pickupText != null) pickupText.SetActive(visible);
     }
 
     private Sprite GetIcon()
@@ -71,7 +72,7 @@ public class MemoryItem : MonoBehaviour
         {
             playerNear = false;
             player = null;
-            pickupText.SetActive(false);
+            SetPickupText(false);
         }
     }
 }

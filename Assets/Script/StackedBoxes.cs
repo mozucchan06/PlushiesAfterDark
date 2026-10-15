@@ -19,10 +19,14 @@ public class StackedBoxes : MonoBehaviour
 
     [Header("崩れる条件")]
     [SerializeField] private float pushTimeToCollapse = 1.5f; // 押し続ける必要がある秒数
-    [SerializeField] private float releaseDistance = 1.5f;    // これ以上離れたら自動で離す
+    [SerializeField] private float grabDistance = 1.5f;       // この距離以内なら E で掴める(ヒントも同じ距離で出る)
+    [SerializeField] private float releaseDistance = 2.5f;    // これ以上離れたら自動で離す
+
+    [Header("ヒント表示")]
+    [SerializeField] private GameObject hintText;             // 「E:おしてみる」などの文字
 
     private Collider2D blockCollider;
-    private PlayerController touchingPlayer;
+    private PlayerController playerRef;      // ヒント表示の距離判定用
     private PlayerController holder;
     private Vector2 grabDir;
     private float pushTimer;
@@ -40,6 +44,9 @@ public class StackedBoxes : MonoBehaviour
         standingVisual.SetActive(true);
         collapsedVisual.SetActive(false);
         itemCollider.enabled = false; // 崩れるまで拾えない
+
+        playerRef = FindFirstObjectByType<PlayerController>();
+        if (hintText != null) hintText.SetActive(false);
     }
 
     private void OnDisable()
@@ -51,6 +58,8 @@ public class StackedBoxes : MonoBehaviour
 
     private void Update()
     {
+        UpdateHint();
+
         if (collapsed) return;
 
 #if UNITY_EDITOR
@@ -69,9 +78,9 @@ public class StackedBoxes : MonoBehaviour
         {
             Release();
         }
-        else if (touchingPlayer != null && GrabLock.Current == null && !touchingPlayer.IsCarrying())
+        else if (CanGrab())
         {
-            Grab(touchingPlayer);
+            Grab(playerRef);
         }
     }
 
@@ -81,7 +90,7 @@ public class StackedBoxes : MonoBehaviour
 
         // プレイヤーが離れすぎたら自動で離す
         float dist = Vector2.Distance(holder.transform.position, transform.position);
-        if (dist > releaseDistance)
+        if (dist > Mathf.Max(releaseDistance, grabDistance + 0.5f))
         {
             Release();
             return;
@@ -105,6 +114,22 @@ public class StackedBoxes : MonoBehaviour
         }
     }
 
+    // E で掴める状態か(近い・何も持っていない・他のものを掴んでいない)
+    private bool CanGrab()
+    {
+        if (playerRef == null || GrabLock.Current != null || playerRef.IsCarrying()) return false;
+
+        return Vector2.Distance(playerRef.transform.position, transform.position) <= grabDistance;
+    }
+
+    // E で掴める時だけヒントを表示。崩れた後や掴んでいる間は消す
+    private void UpdateHint()
+    {
+        if (hintText == null) return;
+
+        hintText.SetActive(!collapsed && !IsGrabbed && CanGrab());
+    }
+
     private void Grab(PlayerController player)
     {
         Vector2 toStack = (Vector2)transform.position - (Vector2)player.transform.position;
@@ -116,6 +141,7 @@ public class StackedBoxes : MonoBehaviour
         pushTimer = 0f;
         GrabLock.Current = this;
         holder.SetGrabAxis(grabDir);
+        Debug.Log("積み箱を掴んだ");
     }
 
     private void Release()
@@ -137,17 +163,5 @@ public class StackedBoxes : MonoBehaviour
 
         memoryItem.position = dropPoint.position;
         itemCollider.enabled = true;   // ここから拾える
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        var p = collision.collider.GetComponentInParent<PlayerController>();
-        if (p != null) touchingPlayer = p;
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        var p = collision.collider.GetComponentInParent<PlayerController>();
-        if (p != null && p == touchingPlayer) touchingPlayer = null;
     }
 }

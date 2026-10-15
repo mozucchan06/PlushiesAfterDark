@@ -17,6 +17,12 @@ public class PlayerController : MonoBehaviour
     // ’Í‚ñ‚Å‚¢‚éŠÔ‚ÌˆÚ“®²(zero‚È‚ç’Í‚ñ‚Å‚¢‚È‚¢)
     private Vector2 grabAxis = Vector2.zero;
 
+    // ‰B‚êê‚É‰B‚ê‚Ä‚¢‚éŠÔ‚Í true
+    private bool isHidden = false;
+
+    // Œ©‚Â‚©‚Á‚½‚È‚Ç‚ÉA‘€ì‚ğ~‚ß‚Ä‚¢‚éŠÔ‚Í true
+    private bool isFrozen = false;
+
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private SpriteRenderer spriteRenderer;
@@ -30,6 +36,9 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         moveInput = Vector2.zero;
+
+        // ‰B‚ê‚Ä‚¢‚éŠÔE~‚ß‚ç‚ê‚Ä‚¢‚éŠÔ‚Í‘€ì‚ğó‚¯•t‚¯‚È‚¢
+        if (isHidden || isFrozen) return;
 
         // ¶‰E
         if (Keyboard.current.aKey.isPressed)
@@ -81,6 +90,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isHidden || isFrozen) return;
+
         float currentSpeed = GetCurrentSpeed();
 
         Vector2 move = moveInput;
@@ -133,5 +144,39 @@ public class PlayerController : MonoBehaviour
     public void ClearGrabAxis()
     {
         grabAxis = Vector2.zero;
+    }
+
+    // ‘€ì‚ğ~‚ß‚é(Œ©‚Â‚©‚Á‚½‚È‚Ç)BƒV[ƒ“‚ğ“Ç‚İ‚İ’¼‚·‚Ü‚Å‰ğœ‚µ‚È‚¢
+    public void Freeze()
+    {
+        isFrozen = true;
+        moveInput = Vector2.zero;
+    }
+
+    // ‰B‚ê‚Ä‚¢‚é‚©(“G‚Ì‹ŠE”»’è‚Åg‚¤)
+    public bool IsHidden()
+    {
+        return isHidden;
+    }
+
+    // ‰B‚êê‚É“ü‚é:ŠG‚ğÁ‚µ‚ÄA•¨—‚à~‚ß‚ÄA‰B‚êê‚ÌˆÊ’u‚ÖˆÚ“®‚·‚é
+    public void Hide(Vector2 spotPosition)
+    {
+        isHidden = true;
+        moveInput = Vector2.zero;
+
+        spriteRenderer.enabled = false;
+        rb.simulated = false;
+        transform.position = spotPosition;
+    }
+
+    // ‰B‚êê‚©‚ço‚é:Œ³‚ÌˆÊ’u‚É–ß‚Á‚ÄAŠG‚Æ•¨—‚ğŒ³‚É–ß‚·
+    public void Unhide(Vector2 exitPosition)
+    {
+        transform.position = exitPosition;
+
+        rb.simulated = true;
+        spriteRenderer.enabled = true;
+        isHidden = false;
     }
 }
