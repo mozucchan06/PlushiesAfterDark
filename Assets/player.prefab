@@ -120,7 +120,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5382192840260223712}
@@ -205,10 +205,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   normalSpeed: 2.5
   carrySpeed: 1
-  frontSprite: {fileID: -1242249737133124781, guid: d2b282dd1ada7f94292b3871e5bfa90b, type: 3}
-  backSprite: {fileID: -1680616304678930202, guid: ecb5dded109d84b42891f88702ea8bd4, type: 3}
-  leftSprite: {fileID: -5225838634553333570, guid: 45caf1b7872b5d04eb773aef8bf94357, type: 3}
-  rightSprite: {fileID: -8050332317183645678, guid: 2c1662cb1a6588d4eb0cc575086c73a8, type: 3}
+  frontSprites:
+  - {fileID: 3099059322467307240, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  - {fileID: -8381240987960762977, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  - {fileID: 6480154766180874237, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  - {fileID: 6758355153260678903, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  backSprites:
+  - {fileID: 9198417323873313656, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  - {fileID: 328256484067815074, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  - {fileID: -5847013183149529541, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  - {fileID: -8727283128455363604, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  leftSprites:
+  - {fileID: -2076346980405440837, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  - {fileID: 4711279528640429898, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  - {fileID: 3297388147514931878, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  - {fileID: -343771905753826517, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  rightSprites:
+  - {fileID: -4552640284460928509, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  - {fileID: 5526980398238946273, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  - {fileID: -4006412706355431321, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  - {fileID: 5939334981282639961, guid: 3ce0181afddd7bf4eada3f2195f98a14, type: 3}
+  frameInterval: 0.15
 --- !u!1 &8870411523153209414
 GameObject:
   m_ObjectHideFlags: 0

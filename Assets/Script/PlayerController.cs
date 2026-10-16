@@ -3,14 +3,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    private enum Direction { Front, Back, Left, Right }
+
     [SerializeField] private float normalSpeed = 2.5f;
     [SerializeField] private float carrySpeed = 1f;
 
-    // 4方向の画像
-    [SerializeField] private Sprite frontSprite;
-    [SerializeField] private Sprite backSprite;
-    [SerializeField] private Sprite leftSprite;
-    [SerializeField] private Sprite rightSprite;
+    // 歩きの絵(各方向に複数枚。1枚目は「立っている絵」にしておく)
+    [Header("歩きの絵(各方向に複数枚)")]
+    [SerializeField] private Sprite[] frontSprites; // 下向き(正面)
+    [SerializeField] private Sprite[] backSprites;  // 上向き(後ろ姿)
+    [SerializeField] private Sprite[] leftSprites;  // 左向き
+    [SerializeField] private Sprite[] rightSprites; // 右向き
+    [SerializeField] private float frameInterval = 0.12f; // 1コマの秒数(通常の速さの時)
 
     private bool isCarrying = false;
 
@@ -26,6 +30,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private SpriteRenderer spriteRenderer;
+
+    // 歩きアニメーション用
+    private Direction facing = Direction.Front;
+    private int frameIndex = 0;
+    private float frameTimer = 0f;
 
     private void Awake()
     {
@@ -67,25 +76,23 @@ public class PlayerController : MonoBehaviour
         {
             if (moveInput.y > 0)
             {
-                // 上に進む → 後ろ姿
-                spriteRenderer.sprite = backSprite;
+                SetFacing(Direction.Back);   // 上に進む → 後ろ姿
             }
             else if (moveInput.y < 0)
             {
-                // 下に進む → 正面
-                spriteRenderer.sprite = frontSprite;
+                SetFacing(Direction.Front);  // 下に進む → 正面
             }
             else if (moveInput.x < 0)
             {
-                // 左に進む → 左向き
-                spriteRenderer.sprite = leftSprite;
+                SetFacing(Direction.Left);   // 左に進む → 左向き
             }
             else if (moveInput.x > 0)
             {
-                // 右に進む → 右向き
-                spriteRenderer.sprite = rightSprite;
+                SetFacing(Direction.Right);  // 右に進む → 右向き
             }
         }
+
+        UpdateWalkAnimation();
     }
 
     private void FixedUpdate()
@@ -104,6 +111,72 @@ public class PlayerController : MonoBehaviour
 
         rb.MovePosition(rb.position + move * currentSpeed * Time.fixedDeltaTime);
     }
+
+    // ---------- 歩きアニメーション ----------
+
+    private Sprite[] GetFrames()
+    {
+        switch (facing)
+        {
+            case Direction.Back: return backSprites;
+            case Direction.Left: return leftSprites;
+            case Direction.Right: return rightSprites;
+            default: return frontSprites;
+        }
+    }
+
+    // 向きを変える。変わった時は、1枚目(立っている絵)から始める
+    private void SetFacing(Direction newFacing)
+    {
+        if (facing == newFacing) return;
+
+        facing = newFacing;
+        frameIndex = 0;
+        frameTimer = 0f;
+        ApplySprite();
+    }
+
+    // 歩いている間だけコマを進める。止まったら、1枚目(立っている絵)に戻す
+    private void UpdateWalkAnimation()
+    {
+        // 掴んでいる間は、掴んだ軸の方向に動いている時だけ「歩いている」とみなす
+        bool moving = grabAxis == Vector2.zero
+            ? moveInput != Vector2.zero
+            : Mathf.Abs(Vector2.Dot(moveInput, grabAxis)) > 0.1f;
+
+        Sprite[] frames = GetFrames();
+        if (frames == null || frames.Length == 0) return;
+
+        if (moving && frames.Length > 1)
+        {
+            // 遅い時(思い出を持っている間)は、コマ送りもゆっくりにする
+            float interval = frameInterval * normalSpeed / Mathf.Max(0.01f, GetCurrentSpeed());
+
+            frameTimer += Time.deltaTime;
+            if (frameTimer >= interval)
+            {
+                frameTimer -= interval;
+                frameIndex = (frameIndex + 1) % frames.Length;
+            }
+        }
+        else
+        {
+            frameIndex = 0;
+            frameTimer = 0f;
+        }
+
+        ApplySprite();
+    }
+
+    private void ApplySprite()
+    {
+        Sprite[] frames = GetFrames();
+        if (frames == null || frames.Length == 0) return;
+
+        spriteRenderer.sprite = frames[frameIndex % frames.Length];
+    }
+
+    // ---------- 外から使う ----------
 
     // 思い出を持っている状態にする
     public void SetCarrying(bool carrying)
@@ -134,10 +207,10 @@ public class PlayerController : MonoBehaviour
     {
         grabAxis = axis;
 
-        if (axis.x > 0) spriteRenderer.sprite = rightSprite;
-        else if (axis.x < 0) spriteRenderer.sprite = leftSprite;
-        else if (axis.y > 0) spriteRenderer.sprite = backSprite;
-        else if (axis.y < 0) spriteRenderer.sprite = frontSprite;
+        if (axis.x > 0) SetFacing(Direction.Right);
+        else if (axis.x < 0) SetFacing(Direction.Left);
+        else if (axis.y > 0) SetFacing(Direction.Back);
+        else if (axis.y < 0) SetFacing(Direction.Front);
     }
 
     // 掴み終了
@@ -151,6 +224,11 @@ public class PlayerController : MonoBehaviour
     {
         isFrozen = true;
         moveInput = Vector2.zero;
+
+        // 立っている絵に戻す
+        frameIndex = 0;
+        frameTimer = 0f;
+        ApplySprite();
     }
 
     // 隠れているか(敵の視界判定で使う)

@@ -1,52 +1,55 @@
 fileFormatVersion: 2
-guid: 8a4605f67dac4e24e9b47a1a313cf914
+guid: 3ce0181afddd7bf4eada3f2195f98a14
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3284343395648720612
-    second: Toys_0
+      213: 3099059322467307240
+    second: kumachan_walk_01_0
   - first:
-      213: -7887824691301979860
-    second: Toys_1
+      213: -8381240987960762977
+    second: kumachan_walk_01_1
   - first:
-      213: -233331491314570147
-    second: Toys_2
+      213: 6480154766180874237
+    second: kumachan_walk_01_2
   - first:
-      213: -966547471579848574
-    second: Toys_3
+      213: 6758355153260678903
+    second: kumachan_walk_01_3
   - first:
-      213: 6707111717848621224
-    second: Toys_4
+      213: 9198417323873313656
+    second: kumachan_walk_01_4
   - first:
-      213: 5760084826489555113
-    second: Toys_5
+      213: 328256484067815074
+    second: kumachan_walk_01_5
   - first:
-      213: 2219809558470429655
-    second: Toys_6
+      213: -5847013183149529541
+    second: kumachan_walk_01_6
   - first:
-      213: 5428002797264424414
-    second: Toys_7
+      213: -8727283128455363604
+    second: kumachan_walk_01_7
   - first:
-      213: -7497759215470337761
-    second: Toys_8
+      213: -2076346980405440837
+    second: kumachan_walk_01_8
   - first:
-      213: -6740718293946405728
-    second: Toys_9
+      213: 4711279528640429898
+    second: kumachan_walk_01_9
   - first:
-      213: -3887074808559636248
-    second: Toys_10
+      213: 3297388147514931878
+    second: kumachan_walk_01_10
   - first:
-      213: -2288064371227225572
-    second: Toys_11
+      213: -343771905753826517
+    second: kumachan_walk_01_11
   - first:
-      213: 3794305402906824362
-    second: Toys_12
+      213: -4552640284460928509
+    second: kumachan_walk_01_12
   - first:
-      213: -3817470353823768684
-    second: Toys_13
+      213: 5526980398238946273
+    second: kumachan_walk_01_13
   - first:
-      213: -983751385994307792
-    second: Toys_14
+      213: -4006412706355431321
+    second: kumachan_walk_01_14
+  - first:
+      213: 5939334981282639961
+    second: kumachan_walk_01_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -155,331 +158,353 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Toys_0
+      name: kumachan_walk_01_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 963
-        width: 314
-        height: 244
+        x: 65
+        y: 778
+        width: 169
+        height: 193
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4eeca0acae4549d20800000000000000
-      internalID: 3284343395648720612
+      spriteID: 8eec685c802120b20800000000000000
+      internalID: 3099059322467307240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_1
+      name: kumachan_walk_01_1
       rect:
         serializedVersion: 2
-        x: 322
-        y: 962
-        width: 299
-        height: 261
+        x: 306
+        y: 777
+        width: 170
+        height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c29e3681c31d88290800000000000000
-      internalID: -7887824691301979860
+      spriteID: f9d97a72ab9dfab80800000000000000
+      internalID: -8381240987960762977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_2
+      name: kumachan_walk_01_2
       rect:
         serializedVersion: 2
-        x: 640
-        y: 971
-        width: 282
-        height: 235
+        x: 547
+        y: 778
+        width: 170
+        height: 193
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5c6841be3a03ccf0800000000000000
-      internalID: -233331491314570147
+      spriteID: df7f3cf2d622ee950800000000000000
+      internalID: 6480154766180874237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_3
+      name: kumachan_walk_01_3
       rect:
         serializedVersion: 2
-        x: 955
-        y: 946
-        width: 254
-        height: 294
+        x: 789
+        y: 777
+        width: 169
+        height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2806ee112322692f0800000000000000
-      internalID: -966547471579848574
+      spriteID: 7fe880064308acd50800000000000000
+      internalID: 6758355153260678903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_4
+      name: kumachan_walk_01_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 354
-        width: 346
-        height: 583
+        x: 63
+        y: 520
+        width: 175
+        height: 207
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a02a335292741d50800000000000000
-      internalID: 6707111717848621224
+      spriteID: 873a44d12d757af70800000000000000
+      internalID: 9198417323873313656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_5
+      name: kumachan_walk_01_5
       rect:
         serializedVersion: 2
-        x: 344
-        y: 690
-        width: 4
-        height: 6
+        x: 304
+        y: 520
+        width: 175
+        height: 207
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a80707a1aeefef40800000000000000
-      internalID: 5760084826489555113
+      spriteID: 2aea41878833e8400800000000000000
+      internalID: 328256484067815074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_6
+      name: kumachan_walk_01_6
       rect:
         serializedVersion: 2
-        x: 378
-        y: 617
-        width: 235
-        height: 342
+        x: 545
+        y: 520
+        width: 175
+        height: 207
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7db85a948095ece10800000000000000
-      internalID: 2219809558470429655
+      spriteID: b36a85d1d7c3bdea0800000000000000
+      internalID: -5847013183149529541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_7
+      name: kumachan_walk_01_7
       rect:
         serializedVersion: 2
-        x: 636
-        y: 617
-        width: 264
-        height: 320
+        x: 785
+        y: 520
+        width: 176
+        height: 207
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eddc5ca09c3245b40800000000000000
-      internalID: 5428002797264424414
+      spriteID: ce3882adb3672e680800000000000000
+      internalID: -8727283128455363604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_8
+      name: kumachan_walk_01_8
       rect:
         serializedVersion: 2
-        x: 962
-        y: 633
-        width: 248
-        height: 257
+        x: 84
+        y: 282
+        width: 134
+        height: 214
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f11aa76e7bb92f790800000000000000
-      internalID: -7497759215470337761
+      spriteID: bbe8a7a1c655f23e0800000000000000
+      internalID: -2076346980405440837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_9
+      name: kumachan_walk_01_9
       rect:
         serializedVersion: 2
-        x: 351
-        y: 368
-        width: 230
-        height: 227
+        x: 326
+        y: 282
+        width: 132
+        height: 214
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ace85eec682472a0800000000000000
-      internalID: -6740718293946405728
+      spriteID: a4fbe2615c3d16140800000000000000
+      internalID: 4711279528640429898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_10
+      name: kumachan_walk_01_10
       rect:
         serializedVersion: 2
-        x: 622
-        y: 35
-        width: 329
-        height: 561
+        x: 568
+        y: 282
+        width: 131
+        height: 214
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e0fe646e065e0ac0800000000000000
-      internalID: -3887074808559636248
+      spriteID: 6aaf533cc0da2cd20800000000000000
+      internalID: 3297388147514931878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_11
+      name: kumachan_walk_01_11
       rect:
         serializedVersion: 2
-        x: 996
-        y: 364
-        width: 224
-        height: 262
+        x: 808
+        y: 282
+        width: 131
+        height: 214
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c1216c9b3992f30e0800000000000000
-      internalID: -2288064371227225572
+      spriteID: b2bb8c9e54daa3bf0800000000000000
+      internalID: -343771905753826517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_12
+      name: kumachan_walk_01_12
       rect:
         serializedVersion: 2
-        x: 30
-        y: 61
-        width: 298
-        height: 288
+        x: 83
+        y: 26
+        width: 134
+        height: 214
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aae4b9d29a418a430800000000000000
-      internalID: 3794305402906824362
+      spriteID: 302b29e38c5c1d0c0800000000000000
+      internalID: -4552640284460928509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_13
+      name: kumachan_walk_01_13
       rect:
         serializedVersion: 2
-        x: 355
-        y: 30
-        width: 258
-        height: 325
+        x: 325
+        y: 26
+        width: 132
+        height: 214
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49fdfb360fe950bc0800000000000000
-      internalID: -3817470353823768684
+      spriteID: 1e354959367c3bc40800000000000000
+      internalID: 5526980398238946273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toys_14
+      name: kumachan_walk_01_14
       rect:
         serializedVersion: 2
-        x: 957
-        y: 46
-        width: 279
-        height: 305
+        x: 566
+        y: 26
+        width: 131
+        height: 214
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 037d28a93530952f0800000000000000
-      internalID: -983751385994307792
+      spriteID: 768b216dedc5668c0800000000000000
+      internalID: -4006412706355431321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kumachan_walk_01_15
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 26
+        width: 131
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950376192b1cc6250800000000000000
+      internalID: 5939334981282639961
       vertices: []
       indices: 
       edges: []
@@ -488,7 +513,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7352b4fbc2d1ca34a9fb118f336504f8
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -496,25 +521,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Toys_0: 3284343395648720612
-      Toys_1: -7887824691301979860
-      Toys_10: -3887074808559636248
-      Toys_11: -2288064371227225572
-      Toys_12: 3794305402906824362
-      Toys_13: -3817470353823768684
-      Toys_14: -983751385994307792
-      Toys_2: -233331491314570147
-      Toys_3: -966547471579848574
-      Toys_4: 6707111717848621224
-      Toys_5: 5760084826489555113
-      Toys_6: 2219809558470429655
-      Toys_7: 5428002797264424414
-      Toys_8: -7497759215470337761
-      Toys_9: -6740718293946405728
+      kumachan_walk_01_0: 3099059322467307240
+      kumachan_walk_01_1: -8381240987960762977
+      kumachan_walk_01_10: 3297388147514931878
+      kumachan_walk_01_11: -343771905753826517
+      kumachan_walk_01_12: -4552640284460928509
+      kumachan_walk_01_13: 5526980398238946273
+      kumachan_walk_01_14: -4006412706355431321
+      kumachan_walk_01_15: 5939334981282639961
+      kumachan_walk_01_2: 6480154766180874237
+      kumachan_walk_01_3: 6758355153260678903
+      kumachan_walk_01_4: 9198417323873313656
+      kumachan_walk_01_5: 328256484067815074
+      kumachan_walk_01_6: -5847013183149529541
+      kumachan_walk_01_7: -8727283128455363604
+      kumachan_walk_01_8: -2076346980405440837
+      kumachan_walk_01_9: 4711279528640429898
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

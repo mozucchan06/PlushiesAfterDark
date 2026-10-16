@@ -3,7 +3,9 @@ using UnityEngine;
 public class DeskSelect : MonoBehaviour
 {
     [SerializeField] private GameObject highlight;
-    [SerializeField] private GameObject lockIcon;                     // 鍵の絵など(なくてもよい)
+    [SerializeField] private GameObject lockIcon;                     // 鍵の絵
+    [SerializeField] private GameObject clearText;                    // クリア済みの時に出す文字
+    [SerializeField] private string clearKey = "Stage2Clear";           // このステージのクリア記録
     [SerializeField] private string requiredClearKey = "Stage1Clear"; // 前のステージのクリア記録
 
     private bool unlocked;
@@ -15,8 +17,8 @@ public class DeskSelect : MonoBehaviour
 
         if (lockIcon != null) lockIcon.SetActive(!unlocked);
 
-        // 原因調べ用のログ(直ったら消してよい)
-        Debug.Log($"ステージ2(机): 必要なクリア記録='{requiredClearKey}' 保存されている値={PlayerPrefs.GetInt(requiredClearKey, 0)} 解放={unlocked}");
+        // このステージをクリア済みなら、クリアの文字を出す
+        if (clearText != null) clearText.SetActive(PlayerPrefs.GetInt(clearKey, 0) == 1);
     }
 
     private void OnMouseEnter()
