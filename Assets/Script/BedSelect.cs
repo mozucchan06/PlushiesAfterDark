@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class BedSelect : MonoBehaviour
 {
@@ -8,12 +7,11 @@ public class BedSelect : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.GetInt("Stage1Clear",0) == 1)
+        if (PlayerPrefs.GetInt("Stage1Clear", 0) == 1)
         {
             clearText.SetActive(true);
         }
     }
-
 
     private void OnMouseEnter()
     {
@@ -24,8 +22,9 @@ public class BedSelect : MonoBehaviour
     {
         highlight.SetActive(false);
     }
+
     private void OnMouseDown()
     {
-        SceneManager.LoadScene("Stage1");
+        SceneFader.LoadScene("Stage1");
     }
 }
