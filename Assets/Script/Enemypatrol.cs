@@ -19,6 +19,9 @@ public class EnemyPatrol : MonoBehaviour
 
     public Vector2 Facing => facing;
 
+    private bool _isMoving = false; // 歩いている間だけ true(歩きアニメーション用)
+    public bool isMoving => _isMoving;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,11 +32,16 @@ public class EnemyPatrol : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (waypoints == null || waypoints.Length == 0) return;
+        if (waypoints == null || waypoints.Length == 0)
+        {
+            _isMoving = false;
+            return;
+        }
 
         // 地点で待っている間は動かない
         if (waitTimer > 0f)
         {
+            _isMoving = false;
             waitTimer -= Time.fixedDeltaTime;
             return;
         }
@@ -41,14 +49,24 @@ public class EnemyPatrol : MonoBehaviour
         Vector2 target = waypoints[targetIndex].position;
         Vector2 toTarget = target - rb.position;
 
-        // 着いたら次の地点へ
+        // 着いたら、その地点で向く方角を向いて待ち、次の地点へ
         if (toTarget.magnitude <= arriveDistance)
         {
-            targetIndex = (targetIndex + 1) % waypoints.Length;
+            _isMoving = false;
             waitTimer = waitTime;
+
+            var point = waypoints[targetIndex].GetComponent<PatrolPoint>();
+            if (point != null)
+            {
+                if (point.TryGetLookVector(out Vector2 look)) facing = look;
+                if (point.WaitTime >= 0f) waitTimer = point.WaitTime;
+            }
+
+            targetIndex = (targetIndex + 1) % waypoints.Length;
             return;
         }
 
+        _isMoving = true;
         facing = toTarget.normalized;
         rb.MovePosition(Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime));
     }

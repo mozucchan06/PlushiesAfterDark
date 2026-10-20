@@ -3,6 +3,7 @@ using UnityEngine;
 /// <summary>
 /// 敵の視界を、ゲーム画面に半透明の扇形で表示する。
 /// 壁(Obstacle Mask)にさえぎられる部分は、扇形が短くなる。
+/// 敵の中心から少し離れた所から始まるので、猫の顔と重ならない。
 /// EnemyVision / EnemyPatrol と同じオブジェクトに付ける。
 /// </summary>
 [RequireComponent(typeof(EnemyVision), typeof(EnemyPatrol))]
@@ -12,7 +13,10 @@ public class EnemyVisionCone : MonoBehaviour
     [SerializeField] private Color coneColor = new Color(1f, 0.9f, 0.2f, 0.35f);
     [SerializeField] private Material coneMaterial; // 空なら Sprites/Default を使う
     [SerializeField] private string sortingLayerName = "Default";
-    [SerializeField] private int sortingOrder = 1;  // 床より上、プレイヤーより下になるよう調整する
+    [SerializeField] private int sortingOrder = 1;  // 床より上、敵の絵より下になるよう調整する
+
+    [Tooltip("扇形が始まる位置(敵の中心から前方へ、どれだけ離すか)。猫の顔と重ならないようにする")]
+    [SerializeField] private float _startDistance = 0.5f;
 
     private EnemyVision vision;
     private EnemyPatrol patrol;
@@ -47,21 +51,30 @@ public class EnemyVisionCone : MonoBehaviour
         meshRenderer.sortingLayerName = sortingLayerName;
         meshRenderer.sortingOrder = sortingOrder;
 
-        // 頂点: 先頭が敵の位置、残りが扇形の外側
-        vertices = new Vector3[rayCount + 2];
-        colors = new Color[rayCount + 2];
-        triangles = new int[rayCount * 3];
+        // 頂点: 光線ごとに「内側(始まり)」と「外側(先端)」の2つ。内側 = 2i、外側 = 2i+1
+        int pointCount = rayCount + 1;
+        vertices = new Vector3[pointCount * 2];
+        colors = new Color[pointCount * 2];
+        triangles = new int[rayCount * 6];
 
         Color rimColor = coneColor;
         rimColor.a *= 0.4f; // 外側ほど薄くする
-        colors[0] = coneColor;
-        for (int i = 1; i < colors.Length; i++) colors[i] = rimColor;
+        for (int i = 0; i < pointCount; i++)
+        {
+            colors[i * 2] = coneColor;
+            colors[i * 2 + 1] = rimColor;
+        }
 
+        // 隣り合う光線の間を、四角形(三角形2つ)でつなぐ
         for (int i = 0; i < rayCount; i++)
         {
-            triangles[i * 3] = 0;
-            triangles[i * 3 + 1] = i + 2;
-            triangles[i * 3 + 2] = i + 1;
+            int t = i * 6;
+            triangles[t] = i * 2;
+            triangles[t + 1] = i * 2 + 3;
+            triangles[t + 2] = i * 2 + 1;
+            triangles[t + 3] = i * 2;
+            triangles[t + 4] = i * 2 + 2;
+            triangles[t + 5] = i * 2 + 3;
         }
     }
 
@@ -72,7 +85,6 @@ public class EnemyVisionCone : MonoBehaviour
         float half = vision.ViewAngle * 0.5f;
 
         Vector3 origin = transform.position;
-        vertices[0] = coneTransform.InverseTransformPoint(origin);
 
         for (int i = 0; i <= rayCount; i++)
         {
@@ -85,8 +97,14 @@ public class EnemyVisionCone : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(origin, dir, dist, vision.ObstacleMask);
             if (hit.collider != null) dist = hit.distance;
 
-            Vector3 world = origin + (Vector3)(dir * dist);
-            vertices[i + 1] = coneTransform.InverseTransformPoint(world);
+            // 内側は、敵の中心から少し離した所。壁が近い時は、壁の手前まで
+            float innerDist = Mathf.Min(_startDistance, dist);
+
+            Vector3 inner = origin + (Vector3)(dir * innerDist);
+            Vector3 outer = origin + (Vector3)(dir * dist);
+
+            vertices[i * 2] = coneTransform.InverseTransformPoint(inner);
+            vertices[i * 2 + 1] = coneTransform.InverseTransformPoint(outer);
         }
 
         mesh.Clear();
