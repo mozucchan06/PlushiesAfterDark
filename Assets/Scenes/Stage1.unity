@@ -2362,11 +2362,11 @@ PrefabInstance:
       objectReference: {fileID: 1213255969}
     - target: {fileID: 8606067196998196066, guid: 1eb5e247c88bebf46bff074bc63e4744, type: 3}
       propertyPath: carrySpeed
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8606067196998196066, guid: 1eb5e247c88bebf46bff074bc63e4744, type: 3}
       propertyPath: normalSpeed
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8606067196998196066, guid: 1eb5e247c88bebf46bff074bc63e4744, type: 3}
       propertyPath: carryDistance

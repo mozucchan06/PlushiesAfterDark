@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: 3ce0181afddd7bf4eada3f2195f98a14
+guid: 65b5f19e4079197459caf0faf7d447b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3099059322467307240
-    second: kumachan_walk_01_0
+      213: 5716658679433122944
+    second: bear_walk3_sheet_0
   - first:
-      213: -8381240987960762977
-    second: kumachan_walk_01_1
+      213: 5565671179958190757
+    second: bear_walk3_sheet_1
   - first:
-      213: 6480154766180874237
-    second: kumachan_walk_01_2
+      213: -7904887487566390014
+    second: bear_walk3_sheet_2
   - first:
-      213: 6758355153260678903
-    second: kumachan_walk_01_3
+      213: 943313421254738870
+    second: bear_walk3_sheet_3
   - first:
-      213: 9198417323873313656
-    second: kumachan_walk_01_4
+      213: -6287105433917427148
+    second: bear_walk3_sheet_4
   - first:
-      213: 328256484067815074
-    second: kumachan_walk_01_5
+      213: -6864825597371313737
+    second: bear_walk3_sheet_5
   - first:
-      213: -5847013183149529541
-    second: kumachan_walk_01_6
+      213: -4149313969874634046
+    second: bear_walk3_sheet_6
   - first:
-      213: -8727283128455363604
-    second: kumachan_walk_01_7
+      213: -6096960815446183389
+    second: bear_walk3_sheet_7
   - first:
-      213: -2076346980405440837
-    second: kumachan_walk_01_8
+      213: -3699158143715562209
+    second: bear_walk3_sheet_8
   - first:
-      213: 4711279528640429898
-    second: kumachan_walk_01_9
+      213: 1195622036799088859
+    second: bear_walk3_sheet_9
   - first:
-      213: 3297388147514931878
-    second: kumachan_walk_01_10
+      213: -7630751175208986104
+    second: bear_walk3_sheet_10
   - first:
-      213: -343771905753826517
-    second: kumachan_walk_01_11
+      213: 7151707737129524690
+    second: bear_walk3_sheet_11
   - first:
-      213: -4552640284460928509
-    second: kumachan_walk_01_12
+      213: 7648733331970649281
+    second: bear_walk3_sheet_12
   - first:
-      213: 5526980398238946273
-    second: kumachan_walk_01_13
+      213: 9185622035414773220
+    second: bear_walk3_sheet_13
   - first:
-      213: -4006412706355431321
-    second: kumachan_walk_01_14
+      213: -6382990829949526911
+    second: bear_walk3_sheet_14
   - first:
-      213: 5939334981282639961
-    second: kumachan_walk_01_15
+      213: -6171326165147345585
+    second: bear_walk3_sheet_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -158,33 +158,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kumachan_walk_01_0
+      name: bear_walk3_sheet_0
       rect:
         serializedVersion: 2
-        x: 65
+        x: 66
         y: 778
-        width: 169
-        height: 193
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8eec685c802120b20800000000000000
-      internalID: 3099059322467307240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: kumachan_walk_01_1
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 777
         width: 170
         height: 194
       alignment: 0
@@ -195,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9d97a72ab9dfab80800000000000000
-      internalID: -8381240987960762977
+      spriteID: 084d3c1e7c6a55f40800000000000000
+      internalID: 5716658679433122944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kumachan_walk_01_2
+      name: bear_walk3_sheet_1
       rect:
         serializedVersion: 2
-        x: 547
+        x: 307
         y: 778
-        width: 170
-        height: 193
+        width: 171
+        height: 194
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,19 +195,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df7f3cf2d622ee950800000000000000
-      internalID: 6480154766180874237
+      spriteID: 5a28902337c3d3d40800000000000000
+      internalID: 5565671179958190757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kumachan_walk_01_3
+      name: bear_walk3_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 778
+        width: 171
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ddc2246b23c4290800000000000000
+      internalID: -7904887487566390014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bear_walk3_sheet_3
       rect:
         serializedVersion: 2
         x: 789
-        y: 777
-        width: 169
+        y: 778
+        width: 171
         height: 194
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -239,84 +239,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7fe880064308acd50800000000000000
-      internalID: 6758355153260678903
+      spriteID: 6b34fb90f82571d00800000000000000
+      internalID: 943313421254738870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kumachan_walk_01_4
+      name: bear_walk3_sheet_4
       rect:
         serializedVersion: 2
         x: 63
-        y: 520
-        width: 175
-        height: 207
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 873a44d12d757af70800000000000000
-      internalID: 9198417323873313656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: kumachan_walk_01_5
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 520
-        width: 175
-        height: 207
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2aea41878833e8400800000000000000
-      internalID: 328256484067815074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: kumachan_walk_01_6
-      rect:
-        serializedVersion: 2
-        x: 545
-        y: 520
-        width: 175
-        height: 207
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b36a85d1d7c3bdea0800000000000000
-      internalID: -5847013183149529541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: kumachan_walk_01_7
-      rect:
-        serializedVersion: 2
-        x: 785
-        y: 520
+        y: 522
         width: 176
         height: 207
       alignment: 0
@@ -327,20 +261,108 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce3882adb3672e680800000000000000
-      internalID: -8727283128455363604
+      spriteID: 4327ce91be6bfb8a0800000000000000
+      internalID: -6287105433917427148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kumachan_walk_01_8
+      name: bear_walk3_sheet_5
       rect:
         serializedVersion: 2
-        x: 84
-        y: 282
+        x: 303
+        y: 522
+        width: 177
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b19ca79d7d3bb0a0800000000000000
+      internalID: -6864825597371313737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bear_walk3_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 522
+        width: 177
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca7e0cadecaa66c0800000000000000
+      internalID: -4149313969874634046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bear_walk3_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 522
+        width: 176
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322bad1017e336ba0800000000000000
+      internalID: -6096960815446183389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bear_walk3_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 266
+        width: 133
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d27db6443f9acc0800000000000000
+      internalID: -3699158143715562209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bear_walk3_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 266
         width: 134
-        height: 214
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,42 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbe8a7a1c655f23e0800000000000000
-      internalID: -2076346980405440837
+      spriteID: bd8e90568e3b79010800000000000000
+      internalID: 1195622036799088859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kumachan_walk_01_9
+      name: bear_walk3_sheet_10
       rect:
         serializedVersion: 2
-        x: 326
-        y: 282
-        width: 132
-        height: 214
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a4fbe2615c3d16140800000000000000
-      internalID: 4711279528640429898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: kumachan_walk_01_10
-      rect:
-        serializedVersion: 2
-        x: 568
-        y: 282
+        x: 576
+        y: 266
         width: 131
-        height: 214
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,42 +393,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6aaf533cc0da2cd20800000000000000
-      internalID: 3297388147514931878
+      spriteID: 80a16405c302a1690800000000000000
+      internalID: -7630751175208986104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kumachan_walk_01_11
+      name: bear_walk3_sheet_11
       rect:
         serializedVersion: 2
-        x: 808
-        y: 282
-        width: 131
-        height: 214
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2bb8c9e54daa3bf0800000000000000
-      internalID: -343771905753826517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: kumachan_walk_01_12
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 26
+        x: 817
+        y: 266
         width: 134
-        height: 214
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,20 +415,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 302b29e38c5c1d0c0800000000000000
-      internalID: -4552640284460928509
+      spriteID: 2dd9409ab48ff3360800000000000000
+      internalID: 7151707737129524690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kumachan_walk_01_13
+      name: bear_walk3_sheet_12
       rect:
         serializedVersion: 2
-        x: 325
-        y: 26
+        x: 75
+        y: 10
         width: 132
-        height: 214
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,20 +437,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e354959367c3bc40800000000000000
-      internalID: 5526980398238946273
+      spriteID: 1ccecc1d072c52a60800000000000000
+      internalID: 7648733331970649281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kumachan_walk_01_14
+      name: bear_walk3_sheet_13
       rect:
         serializedVersion: 2
-        x: 566
-        y: 26
-        width: 131
-        height: 214
+        x: 314
+        y: 10
+        width: 134
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,20 +459,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 768b216dedc5668c0800000000000000
-      internalID: -4006412706355431321
+      spriteID: 4ede5edd292e97f70800000000000000
+      internalID: 9185622035414773220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kumachan_walk_01_15
+      name: bear_walk3_sheet_14
       rect:
         serializedVersion: 2
-        x: 808
-        y: 26
-        width: 131
-        height: 214
+        x: 557
+        y: 10
+        width: 132
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,8 +481,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 950376192b1cc6250800000000000000
-      internalID: 5939334981282639961
+      spriteID: 18c5840a8af0b67a0800000000000000
+      internalID: -6382990829949526911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bear_walk3_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 10
+        width: 134
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d9155cc8b0b5aa0800000000000000
+      internalID: -6171326165147345585
       vertices: []
       indices: 
       edges: []
@@ -523,22 +523,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      kumachan_walk_01_0: 3099059322467307240
-      kumachan_walk_01_1: -8381240987960762977
-      kumachan_walk_01_10: 3297388147514931878
-      kumachan_walk_01_11: -343771905753826517
-      kumachan_walk_01_12: -4552640284460928509
-      kumachan_walk_01_13: 5526980398238946273
-      kumachan_walk_01_14: -4006412706355431321
-      kumachan_walk_01_15: 5939334981282639961
-      kumachan_walk_01_2: 6480154766180874237
-      kumachan_walk_01_3: 6758355153260678903
-      kumachan_walk_01_4: 9198417323873313656
-      kumachan_walk_01_5: 328256484067815074
-      kumachan_walk_01_6: -5847013183149529541
-      kumachan_walk_01_7: -8727283128455363604
-      kumachan_walk_01_8: -2076346980405440837
-      kumachan_walk_01_9: 4711279528640429898
+      bear_walk3_sheet_0: 5716658679433122944
+      bear_walk3_sheet_1: 5565671179958190757
+      bear_walk3_sheet_10: -7630751175208986104
+      bear_walk3_sheet_11: 7151707737129524690
+      bear_walk3_sheet_12: 7648733331970649281
+      bear_walk3_sheet_13: 9185622035414773220
+      bear_walk3_sheet_14: -6382990829949526911
+      bear_walk3_sheet_15: -6171326165147345585
+      bear_walk3_sheet_2: -7904887487566390014
+      bear_walk3_sheet_3: 943313421254738870
+      bear_walk3_sheet_4: -6287105433917427148
+      bear_walk3_sheet_5: -6864825597371313737
+      bear_walk3_sheet_6: -4149313969874634046
+      bear_walk3_sheet_7: -6096960815446183389
+      bear_walk3_sheet_8: -3699158143715562209
+      bear_walk3_sheet_9: 1195622036799088859
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
