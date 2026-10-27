@@ -16,6 +16,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Sprite[] rightSprites; // 右向き
     [SerializeField] private float frameInterval = 0.12f; // 1コマの秒数(通常の速さの時)
 
+    [Header("足音")]
+    [Tooltip("足音の間隔(秒)。通常の速さの時。思い出を持って遅い時は、自動で長くなる")]
+    [SerializeField] private float _stepInterval = 0.38f;
+    [Tooltip("足音の大きさ(0?1)")]
+    [SerializeField, Range(0f, 1f)] private float _stepVolume = 0.6f;
+
     private bool isCarrying = false;
 
     // 掴んでいる間の移動軸(zeroなら掴んでいない)
@@ -35,6 +41,7 @@ public class PlayerController : MonoBehaviour
     private Direction facing = Direction.Front;
     private int frameIndex = 0;
     private float frameTimer = 0f;
+    private float _stepTimer = 0f; // 足音用のタイマー
 
     private void Awake()
     {
@@ -144,6 +151,8 @@ public class PlayerController : MonoBehaviour
             ? moveInput != Vector2.zero
             : Mathf.Abs(Vector2.Dot(moveInput, grabAxis)) > 0.1f;
 
+        UpdateFootstep(moving);
+
         Sprite[] frames = GetFrames();
         if (frames == null || frames.Length == 0) return;
 
@@ -166,6 +175,26 @@ public class PlayerController : MonoBehaviour
         }
 
         ApplySprite();
+    }
+
+    // 歩いている間、一定の間隔で足音を鳴らす。遅い時(思い出を持っている間)は、間隔を長くする
+    private void UpdateFootstep(bool moving)
+    {
+        if (!moving)
+        {
+            // 次に歩き出した時、少ししてから最初の足音が鳴るようにする
+            _stepTimer = _stepInterval * 0.5f;
+            return;
+        }
+
+        float interval = _stepInterval * normalSpeed / Mathf.Max(0.01f, GetCurrentSpeed());
+
+        _stepTimer += Time.deltaTime;
+        if (_stepTimer >= interval)
+        {
+            _stepTimer = 0f;
+            AudioManager.PlayRandomSE("SE/Step", _stepVolume, 0.08f);
+        }
     }
 
     private void ApplySprite()

@@ -226,6 +226,8 @@ MonoBehaviour:
   - {fileID: -6382990829949526911, guid: 65b5f19e4079197459caf0faf7d447b0, type: 3}
   - {fileID: -6171326165147345585, guid: 65b5f19e4079197459caf0faf7d447b0, type: 3}
   frameInterval: 0.25
+  _stepInterval: 0.5
+  _stepVolume: 0.2
 --- !u!1 &8870411523153209414
 GameObject:
   m_ObjectHideFlags: 0
