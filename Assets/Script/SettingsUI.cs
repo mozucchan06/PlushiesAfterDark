@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class SettingsUI : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class SettingsUI : MonoBehaviour
     public Slider seSlider;
 
     public AudioMixer mixer;
+
+    // ステージセレクトのシーン名(Inspectorで実際の名前に合わせる)
+    [SerializeField] private string _stageSelectSceneName = "StageSelect";
 
     private void Start()
     {
@@ -26,6 +30,19 @@ public class SettingsUI : MonoBehaviour
     public void ToggleOption()
     {
         optionPanel.SetActive(!optionPanel.activeSelf);
+    }
+
+    /// <summary>
+    /// ステージセレクトのシーンへ戻る
+    /// </summary>
+    public void LoadStageSelect()
+    {
+        Debug.Log($"[SettingsUI] LoadStageSelect :scene = {_stageSelectSceneName}");
+
+        // メニューを開いてゲームを止めている場合に備えて、時間を戻しておく
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene(_stageSelectSceneName);
     }
 
     private void SetBGM(float value)
