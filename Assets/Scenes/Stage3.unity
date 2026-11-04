@@ -2783,7 +2783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 424491756802248343, guid: fda0392640efcf54c919770e54f53558, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000061035156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 424491756802248343, guid: fda0392640efcf54c919770e54f53558, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3255,7 +3255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4490300355812324845, guid: 5d617288dbc5ffa4f84dadd396530f86, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -1322.774
+      value: -1322.7739
       objectReference: {fileID: 0}
     - target: {fileID: 4490300355812324845, guid: 5d617288dbc5ffa4f84dadd396530f86, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3291,11 +3291,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4490300355812324845, guid: 5d617288dbc5ffa4f84dadd396530f86, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 614
+      value: 624.203
       objectReference: {fileID: 0}
     - target: {fileID: 4490300355812324845, guid: 5d617288dbc5ffa4f84dadd396530f86, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 134
+      value: -9.29303
       objectReference: {fileID: 0}
     - target: {fileID: 4490300355812324845, guid: 5d617288dbc5ffa4f84dadd396530f86, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3821,7 +3821,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: "\u3082\u3069\u308B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cfd9d4362880bbf419cdf2e262fc13ec, type: 2}
   m_sharedMaterial: {fileID: 1503964455749901794, guid: cfd9d4362880bbf419cdf2e262fc13ec, type: 2}

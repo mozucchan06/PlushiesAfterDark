@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   normalSpeed: 0.8
-  carrySpeed: 0.3
+  carrySpeed: 0.4
   frontSprites:
   - {fileID: 5716658679433122944, guid: 65b5f19e4079197459caf0faf7d447b0, type: 3}
   - {fileID: 5565671179958190757, guid: 65b5f19e4079197459caf0faf7d447b0, type: 3}

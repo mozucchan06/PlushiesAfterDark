@@ -39,6 +39,9 @@ public class SettingsUI : MonoBehaviour
     {
         Debug.Log($"[SettingsUI] LoadStageSelect :scene = {_stageSelectSceneName}");
 
+        // 移動後もパネルが残らないように、先に閉じる
+        optionPanel.SetActive(false);
+
         // メニューを開いてゲームを止めている場合に備えて、時間を戻しておく
         Time.timeScale = 1f;
 
